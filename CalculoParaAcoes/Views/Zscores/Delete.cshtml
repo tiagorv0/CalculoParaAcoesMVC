@@ -1,0 +1,65 @@
+﻿@model CalculoParaAcoes.Models.Zscore
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Zscore</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        
+        <dt>
+            @Html.DisplayNameFor(model => model.NomeDaAcao)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.NomeDaAcao)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Variacao5Anos)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Variacao5Anos)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Dias)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Dias)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.DiasUteis)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DiasUteis)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.PrecoAberturaMes)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.PrecoAberturaMes)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Ewma)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Ewma)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.PrecoAtual)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.PrecoAtual)
+        </dd>
+        
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="Id" />
+        <input type="submit" value="Delete" class="btn btn-default" /> |
+        <a asp-action="Index">Back to List</a>
+    </form>
+</div>

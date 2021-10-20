@@ -1,0 +1,69 @@
+﻿@model IEnumerable<CalculoParaAcoes.Models.Zscore>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            
+            <th>
+                @Html.DisplayNameFor(model => model.DataCriado)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NomeDaAcao)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ValorZscore)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AbaixoValorAtual)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PrecoAtual)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AcimaValorAtual)
+            </th>
+            
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.NomeDaAcao)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Variacao5Anos)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ValorZscore)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AbaixoValorAtual)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PrecoAtual)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AcimaValorAtual)
+            </td>
+
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

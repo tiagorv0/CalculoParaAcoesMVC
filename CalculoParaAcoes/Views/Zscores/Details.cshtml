@@ -1,0 +1,87 @@
+﻿@model CalculoParaAcoes.Models.Zscore
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Zscore</h4>
+    <hr />
+    <dl class="dl-horizontal">
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DataCriado)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DataCriado)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.NomeDaAcao)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.NomeDaAcao)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Variacao5Anos)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Variacao5Anos)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Dias)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Dias)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.DiasUteis)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DiasUteis)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.PrecoAberturaMes)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.PrecoAberturaMes)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Ewma)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Ewma)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.AbaixoValorAtual)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.AbaixoValorAtual)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.PrecoAtual)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.PrecoAtual)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.AcimaValorAtual)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.AcimaValorAtual)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ValorZscore)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ValorZscore)
+        </dd>
+
+
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

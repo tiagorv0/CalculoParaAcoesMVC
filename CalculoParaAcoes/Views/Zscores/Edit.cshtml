@@ -1,0 +1,67 @@
+﻿@model CalculoParaAcoes.Models.Zscore
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h2>Edit</h2>
+
+<h4>Zscore</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            
+            <div class="form-group">
+                <label asp-for="NomeDaAcao" class="control-label"></label>
+                <input asp-for="NomeDaAcao" class="form-control" />
+                <span asp-validation-for="NomeDaAcao" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Variacao5Anos" class="control-label"></label>
+                <input asp-for="Variacao5Anos" class="form-control" />
+                <span asp-validation-for="Variacao5Anos" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Dias" class="control-label"></label>
+                <input asp-for="Dias" class="form-control" />
+                <span asp-validation-for="Dias" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DiasUteis" class="control-label"></label>
+                <input asp-for="DiasUteis" class="form-control" />
+                <span asp-validation-for="DiasUteis" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PrecoAberturaMes" class="control-label"></label>
+                <input asp-for="PrecoAberturaMes" class="form-control" />
+                <span asp-validation-for="PrecoAberturaMes" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Ewma" class="control-label"></label>
+                <input asp-for="Ewma" class="form-control" />
+                <span asp-validation-for="Ewma" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PrecoAtual" class="control-label"></label>
+                <input asp-for="PrecoAtual" class="form-control" />
+                <span asp-validation-for="PrecoAtual" class="text-danger"></span>
+            </div>
+            
+            
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
