@@ -13,7 +13,7 @@ namespace CalculoParaAcoes.Data
         {
 
         }
-        public DbSet<Zscore> Zscore { get; set; }
+        public DbSet<ZscoreModel> Zscore { get; set; }
         public DbSet<DesvioPadrao> DesvioPadrao { get; set; }
     }
 }

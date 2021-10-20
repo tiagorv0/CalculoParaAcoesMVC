@@ -1,35 +1,33 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Tiago Vazzoller\\Documents\\GitHub\\CalculoParaAcoes\\CalculoParaAcoes\\CalculoParaAcoesMVC.csproj": {}
+    "C:\\Users\\luang\\Desktop\\PESSOAL\\REPO\\CalculoParaAcoesMVC\\CalculoParaAcoes\\CalculoParaAcoesMVC.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Tiago Vazzoller\\Documents\\GitHub\\CalculoParaAcoes\\CalculoParaAcoes\\CalculoParaAcoesMVC.csproj": {
+    "C:\\Users\\luang\\Desktop\\PESSOAL\\REPO\\CalculoParaAcoesMVC\\CalculoParaAcoes\\CalculoParaAcoesMVC.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Tiago Vazzoller\\Documents\\GitHub\\CalculoParaAcoes\\CalculoParaAcoes\\CalculoParaAcoesMVC.csproj",
+        "projectUniqueName": "C:\\Users\\luang\\Desktop\\PESSOAL\\REPO\\CalculoParaAcoesMVC\\CalculoParaAcoes\\CalculoParaAcoesMVC.csproj",
         "projectName": "CalculoParaAcoesMVC",
-        "projectPath": "C:\\Users\\Tiago Vazzoller\\Documents\\GitHub\\CalculoParaAcoes\\CalculoParaAcoes\\CalculoParaAcoesMVC.csproj",
-        "packagesPath": "C:\\Users\\Tiago Vazzoller\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Tiago Vazzoller\\Documents\\GitHub\\CalculoParaAcoes\\CalculoParaAcoes\\obj\\",
+        "projectPath": "C:\\Users\\luang\\Desktop\\PESSOAL\\REPO\\CalculoParaAcoesMVC\\CalculoParaAcoes\\CalculoParaAcoesMVC.csproj",
+        "packagesPath": "C:\\Users\\luang\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\luang\\Desktop\\PESSOAL\\REPO\\CalculoParaAcoesMVC\\CalculoParaAcoes\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\",
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\Tiago Vazzoller\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Users\\luang\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp2.1"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
+          "http://gitlab.isiengenharia.com.br/api/v4/projects/5/packages/nuget/index.json": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://pkgs.dev.azure.com/hsl-dev/_packaging/hsl-feed-v2/nuget/v3/index.json": {}
         },
         "frameworks": {
           "netcoreapp2.1": {

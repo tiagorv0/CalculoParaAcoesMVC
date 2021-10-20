@@ -16,7 +16,7 @@ namespace CalculoParaAcoesMVC.Models.ViewModels
 
         [Required]
         [Display(Name = "Variação % de 5 anos")]
-        public double Variacao5Anos { get; set; }
+        public string Variacao5Anos { get; set; }
 
         [Required]
         public int Dias { get; set; }

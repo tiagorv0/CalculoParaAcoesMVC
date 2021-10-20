@@ -41,3 +41,46 @@ C:\Users\Tiago Vazzoller\Documents\GitHub\CalculoParaAcoes\CalculoParaAcoes\obj\
 C:\Users\Tiago Vazzoller\Documents\GitHub\CalculoParaAcoes\CalculoParaAcoes\obj\Debug\netcoreapp2.1\Razor\Views\Zscores\Edit.cshtml.g.cs
 C:\Users\Tiago Vazzoller\Documents\GitHub\CalculoParaAcoes\CalculoParaAcoes\obj\Debug\netcoreapp2.1\Razor\Views\Zscores\Index.cshtml.g.cs
 C:\Users\Tiago Vazzoller\Documents\GitHub\CalculoParaAcoes\CalculoParaAcoes\obj\Debug\netcoreapp2.1\Razor\Views\Zscores\Create.cshtml.g.cs
+C:\Users\luang\Desktop\PESSOAL\REPO\CalculoParaAcoesMVC\CalculoParaAcoes\obj\Debug\netcoreapp2.1\CalculoParaAcoesMVC.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\luang\Desktop\PESSOAL\REPO\CalculoParaAcoesMVC\CalculoParaAcoes\obj\Debug\netcoreapp2.1\CalculoParaAcoesMVC.AssemblyInfoInputs.cache
+C:\Users\luang\Desktop\PESSOAL\REPO\CalculoParaAcoesMVC\CalculoParaAcoes\obj\Debug\netcoreapp2.1\CalculoParaAcoesMVC.AssemblyInfo.cs
+C:\Users\luang\Desktop\PESSOAL\REPO\CalculoParaAcoesMVC\CalculoParaAcoes\obj\Debug\netcoreapp2.1\CalculoParaAcoesMVC.csproj.CoreCompileInputs.cache
+C:\Users\luang\Desktop\PESSOAL\REPO\CalculoParaAcoesMVC\CalculoParaAcoes\obj\Debug\netcoreapp2.1\CalculoParaAcoesMVC.RazorAssemblyInfo.cache
+C:\Users\luang\Desktop\PESSOAL\REPO\CalculoParaAcoesMVC\CalculoParaAcoes\obj\Debug\netcoreapp2.1\CalculoParaAcoesMVC.RazorAssemblyInfo.cs
+C:\Users\luang\Desktop\PESSOAL\REPO\CalculoParaAcoesMVC\CalculoParaAcoes\obj\Debug\netcoreapp2.1\CalculoParaAcoesMVC.TagHelpers.input.cache
+C:\Users\luang\Desktop\PESSOAL\REPO\CalculoParaAcoesMVC\CalculoParaAcoes\obj\Debug\netcoreapp2.1\CalculoParaAcoesMVC.TagHelpers.output.cache
+C:\Users\luang\Desktop\PESSOAL\REPO\CalculoParaAcoesMVC\CalculoParaAcoes\obj\Debug\netcoreapp2.1\CalculoParaAcoesMVC.RazorCoreGenerate.cache
+C:\Users\luang\Desktop\PESSOAL\REPO\CalculoParaAcoesMVC\CalculoParaAcoes\obj\Debug\netcoreapp2.1\Razor\Views\DesvioPadrao\Create.cshtml.g.cs
+C:\Users\luang\Desktop\PESSOAL\REPO\CalculoParaAcoesMVC\CalculoParaAcoes\obj\Debug\netcoreapp2.1\Razor\Views\DesvioPadrao\Delete.cshtml.g.cs
+C:\Users\luang\Desktop\PESSOAL\REPO\CalculoParaAcoesMVC\CalculoParaAcoes\obj\Debug\netcoreapp2.1\Razor\Views\DesvioPadrao\Details.cshtml.g.cs
+C:\Users\luang\Desktop\PESSOAL\REPO\CalculoParaAcoesMVC\CalculoParaAcoes\obj\Debug\netcoreapp2.1\Razor\Views\DesvioPadrao\Edit.cshtml.g.cs
+C:\Users\luang\Desktop\PESSOAL\REPO\CalculoParaAcoesMVC\CalculoParaAcoes\obj\Debug\netcoreapp2.1\Razor\Views\DesvioPadrao\Index.cshtml.g.cs
+C:\Users\luang\Desktop\PESSOAL\REPO\CalculoParaAcoesMVC\CalculoParaAcoes\obj\Debug\netcoreapp2.1\Razor\Views\Home\Contact.cshtml.g.cs
+C:\Users\luang\Desktop\PESSOAL\REPO\CalculoParaAcoesMVC\CalculoParaAcoes\obj\Debug\netcoreapp2.1\Razor\Views\Home\Index.cshtml.g.cs
+C:\Users\luang\Desktop\PESSOAL\REPO\CalculoParaAcoesMVC\CalculoParaAcoes\obj\Debug\netcoreapp2.1\Razor\Views\Shared\Error.cshtml.g.cs
+C:\Users\luang\Desktop\PESSOAL\REPO\CalculoParaAcoesMVC\CalculoParaAcoes\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_CookieConsentPartial.cshtml.g.cs
+C:\Users\luang\Desktop\PESSOAL\REPO\CalculoParaAcoesMVC\CalculoParaAcoes\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_Layout.cshtml.g.cs
+C:\Users\luang\Desktop\PESSOAL\REPO\CalculoParaAcoesMVC\CalculoParaAcoes\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
+C:\Users\luang\Desktop\PESSOAL\REPO\CalculoParaAcoesMVC\CalculoParaAcoes\obj\Debug\netcoreapp2.1\Razor\Views\Zscores\Create.cshtml.g.cs
+C:\Users\luang\Desktop\PESSOAL\REPO\CalculoParaAcoesMVC\CalculoParaAcoes\obj\Debug\netcoreapp2.1\Razor\Views\Zscores\Delete.cshtml.g.cs
+C:\Users\luang\Desktop\PESSOAL\REPO\CalculoParaAcoesMVC\CalculoParaAcoes\obj\Debug\netcoreapp2.1\Razor\Views\Zscores\Details.cshtml.g.cs
+C:\Users\luang\Desktop\PESSOAL\REPO\CalculoParaAcoesMVC\CalculoParaAcoes\obj\Debug\netcoreapp2.1\Razor\Views\Zscores\Edit.cshtml.g.cs
+C:\Users\luang\Desktop\PESSOAL\REPO\CalculoParaAcoesMVC\CalculoParaAcoes\obj\Debug\netcoreapp2.1\Razor\Views\Zscores\Index.cshtml.g.cs
+C:\Users\luang\Desktop\PESSOAL\REPO\CalculoParaAcoesMVC\CalculoParaAcoes\obj\Debug\netcoreapp2.1\Razor\Views\_ViewImports.cshtml.g.cs
+C:\Users\luang\Desktop\PESSOAL\REPO\CalculoParaAcoesMVC\CalculoParaAcoes\obj\Debug\netcoreapp2.1\Razor\Views\_ViewStart.cshtml.g.cs
+C:\Users\luang\Desktop\PESSOAL\REPO\CalculoParaAcoesMVC\CalculoParaAcoes\obj\Debug\netcoreapp2.1\CalculoParaAcoesMVC.RazorTargetAssemblyInfo.cache
+C:\Users\luang\Desktop\PESSOAL\REPO\CalculoParaAcoesMVC\CalculoParaAcoes\obj\Debug\netcoreapp2.1\CalculoParaAcoesMVC.RazorTargetAssemblyInfo.cs
+C:\Users\luang\Desktop\PESSOAL\REPO\CalculoParaAcoesMVC\CalculoParaAcoes\obj\Debug\netcoreapp2.1\CalculoParaAcoesMVC.dll
+C:\Users\luang\Desktop\PESSOAL\REPO\CalculoParaAcoesMVC\CalculoParaAcoes\obj\Debug\netcoreapp2.1\CalculoParaAcoesMVC.pdb
+C:\Users\luang\Desktop\PESSOAL\REPO\CalculoParaAcoesMVC\CalculoParaAcoes\bin\Debug\netcoreapp2.1\appsettings.Development.json
+C:\Users\luang\Desktop\PESSOAL\REPO\CalculoParaAcoesMVC\CalculoParaAcoes\bin\Debug\netcoreapp2.1\appsettings.json
+C:\Users\luang\Desktop\PESSOAL\REPO\CalculoParaAcoesMVC\CalculoParaAcoes\bin\Debug\netcoreapp2.1\CalculoParaAcoesMVC.deps.json
+C:\Users\luang\Desktop\PESSOAL\REPO\CalculoParaAcoesMVC\CalculoParaAcoes\bin\Debug\netcoreapp2.1\CalculoParaAcoesMVC.runtimeconfig.json
+C:\Users\luang\Desktop\PESSOAL\REPO\CalculoParaAcoesMVC\CalculoParaAcoes\bin\Debug\netcoreapp2.1\CalculoParaAcoesMVC.runtimeconfig.dev.json
+C:\Users\luang\Desktop\PESSOAL\REPO\CalculoParaAcoesMVC\CalculoParaAcoes\bin\Debug\netcoreapp2.1\CalculoParaAcoesMVC.dll
+C:\Users\luang\Desktop\PESSOAL\REPO\CalculoParaAcoesMVC\CalculoParaAcoes\bin\Debug\netcoreapp2.1\CalculoParaAcoesMVC.pdb
+C:\Users\luang\Desktop\PESSOAL\REPO\CalculoParaAcoesMVC\CalculoParaAcoes\bin\Debug\netcoreapp2.1\CalculoParaAcoesMVC.Views.dll
+C:\Users\luang\Desktop\PESSOAL\REPO\CalculoParaAcoesMVC\CalculoParaAcoes\bin\Debug\netcoreapp2.1\CalculoParaAcoesMVC.Views.pdb
+C:\Users\luang\Desktop\PESSOAL\REPO\CalculoParaAcoesMVC\CalculoParaAcoes\obj\Debug\netcoreapp2.1\CalculoParaAcoesMVC.Views.pdb
+C:\Users\luang\Desktop\PESSOAL\REPO\CalculoParaAcoesMVC\CalculoParaAcoes\obj\Debug\netcoreapp2.1\CalculoParaAcoesMVC.genruntimeconfig.cache
+C:\Users\luang\Desktop\PESSOAL\REPO\CalculoParaAcoesMVC\CalculoParaAcoes\obj\Debug\netcoreapp2.1\CalculoParaAcoesMVC.csproj.CopyComplete

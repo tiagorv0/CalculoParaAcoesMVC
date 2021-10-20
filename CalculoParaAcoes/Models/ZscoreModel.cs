@@ -1,10 +1,9 @@
 ﻿using System.ComponentModel.DataAnnotations;
-using CalculoParaAcoes.Services.Exceptions;
 using System;
 
 namespace CalculoParaAcoes.Models
 {
-    public class Zscore
+    public class ZscoreModel
     {
         [Key]
         public int Id { get; set; }
