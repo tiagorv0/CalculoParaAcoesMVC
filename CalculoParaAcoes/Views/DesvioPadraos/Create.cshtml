@@ -1,0 +1,46 @@
+﻿@model CalculoParaAcoes.Models.DesvioPadrao
+
+@{
+    ViewData["Title"] = "Novo Cálculo";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<h4>DesvioPadrao</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="NomeDaAcao" class="control-label"></label>
+                <input asp-for="NomeDaAcao" class="form-control" />
+                <span asp-validation-for="NomeDaAcao" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FechamentoAtual" class="control-label"></label>
+                <input asp-for="FechamentoAtual" class="form-control" />
+                <span asp-validation-for="FechamentoAtual" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Abertura1Antes" class="control-label"></label>
+                <input asp-for="Abertura1Antes" class="form-control" />
+                <span asp-validation-for="Abertura1Antes" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DesvPadrao" class="control-label"></label>
+                <input asp-for="DesvPadrao" class="form-control" />
+                <span asp-validation-for="DesvPadrao" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Calcular" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

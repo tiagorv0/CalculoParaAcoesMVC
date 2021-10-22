@@ -1,0 +1,75 @@
+﻿@model CalculoParaAcoes.Models.DesvioPadrao
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>DesvioPadrao</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NomeDaAcao)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.NomeDaAcao)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.FechamentoAtual)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.FechamentoAtual)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Abertura1Antes)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Abertura1Antes)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.DesvPadrao)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DesvPadrao)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.DataCriado)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DataCriado)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Desvio1)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Desvio1)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Desvio2)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Desvio2)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Desvio1n)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Desvio1n)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Desvio2n)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Desvio2n)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="Id" />
+        <input type="submit" value="Delete" class="btn btn-default" /> |
+        <a asp-action="Index">Back to List</a>
+    </form>
+</div>

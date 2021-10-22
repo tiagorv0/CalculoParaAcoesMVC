@@ -8,43 +8,50 @@ namespace CalculoParaAcoes.Models
 {
     public class DesvioPadrao
     {
+        [Key]
         public int Id { get; set; }
-        [Display(Name = "Data")]
-        [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}")]
-        public DateTime DataCriado { get; set; }
+        
+        [Required]
+        [Display(Name = "Nome da Ação")]
+        public string NomeDaAcao { get; set; }
+
         [Required]
         [DisplayFormat(DataFormatString = "{0:F2}")]
         [Display(Name = "Fechamento atual")]
-        public double FechamentoAtual { get; set; }
+        public string FechamentoAtual { get; set; }
+
         [Required]
         [DisplayFormat(DataFormatString = "{0:F2}")]
         [Display(Name = "Abertura 1 anos antes")]
-        public double Abertura1Antes { get; set; }
+        public string Abertura1Antes { get; set; }
+
         [Required]
         [Display(Name = "Desvio Padrão")]
-        public double DesvPadrao { get; set; }
+        public string DesvPadrao { get; set; }
 
-        public DesvioPadrao(double fechamentoAtual, double abertura1Antes, double desvPadrao, int id)
+        [Display(Name = "Data")]
+        [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}")]
+        public DateTime DataCriado { get; set; }
+
+        [DisplayFormat(DataFormatString = "{0:F2}")]
+        public double Desvio1 { get; set; }
+
+        [DisplayFormat(DataFormatString = "{0:F2}")]
+        public double Desvio2 { get; set; }
+
+        [DisplayFormat(DataFormatString = "{0:F2}")]
+        public double Desvio1n { get; set; }
+
+        [DisplayFormat(DataFormatString = "{0:F2}")]
+        public double Desvio2n { get; set; }
+
+        public DesvioPadrao()
         {
-            FechamentoAtual = fechamentoAtual;
-            Abertura1Antes = abertura1Antes;
-            DesvPadrao = desvPadrao;
-            Id = id;
-            DataCriado = DateTime.Now;
+
         }
 
-        public void CalculoDP(out double desvio1, out double desvio2, out double desvio1n, out double desvio2n)
-        {
-            double retornoAbsoluto = FechamentoAtual / Abertura1Antes - 1;
-            double retornoMediaMensal = Math.Pow(1 + retornoAbsoluto, 1 / 12.0) - 1;
+        
 
-            double dv = DesvPadrao / Math.Sqrt(12) / 100;
-
-            desvio1 = FechamentoAtual + (FechamentoAtual * (retornoMediaMensal + dv));
-            desvio2 = FechamentoAtual + (FechamentoAtual * (retornoMediaMensal + dv*2));
-
-            desvio1n = FechamentoAtual + (FechamentoAtual * (retornoMediaMensal - dv));
-            desvio2n = FechamentoAtual + (FechamentoAtual * (retornoMediaMensal - dv*2));
-        }
+        
     }
 }

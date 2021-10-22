@@ -22,13 +22,27 @@ namespace CalculoParaAcoesMVC.Migrations
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd();
 
-                    b.Property<double>("Abertura1Antes");
+                    b.Property<string>("Abertura1Antes")
+                        .IsRequired();
 
                     b.Property<DateTime>("DataCriado");
 
-                    b.Property<double>("DesvPadrao");
+                    b.Property<string>("DesvPadrao")
+                        .IsRequired();
 
-                    b.Property<double>("FechamentoAtual");
+                    b.Property<double>("Desvio1");
+
+                    b.Property<double>("Desvio1n");
+
+                    b.Property<double>("Desvio2");
+
+                    b.Property<double>("Desvio2n");
+
+                    b.Property<string>("FechamentoAtual")
+                        .IsRequired();
+
+                    b.Property<string>("NomeDaAcao")
+                        .IsRequired();
 
                     b.HasKey("Id");
 
@@ -50,18 +64,22 @@ namespace CalculoParaAcoesMVC.Migrations
 
                     b.Property<int>("DiasUteis");
 
-                    b.Property<double>("Ewma");
+                    b.Property<string>("Ewma")
+                        .IsRequired();
 
                     b.Property<string>("NomeDaAcao")
                         .IsRequired();
 
-                    b.Property<double>("PrecoAberturaMes");
+                    b.Property<string>("PrecoAberturaMes")
+                        .IsRequired();
 
-                    b.Property<double>("PrecoAtual");
+                    b.Property<string>("PrecoAtual")
+                        .IsRequired();
 
                     b.Property<double>("ValorZscore");
 
-                    b.Property<double>("Variacao5Anos");
+                    b.Property<string>("Variacao5Anos")
+                        .IsRequired();
 
                     b.HasKey("Id");
 

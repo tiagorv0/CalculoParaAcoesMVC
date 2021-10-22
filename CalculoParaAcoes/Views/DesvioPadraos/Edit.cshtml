@@ -1,0 +1,74 @@
+﻿@model CalculoParaAcoes.Models.DesvioPadrao
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h2>Edit</h2>
+
+<h4>DesvioPadrao</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group">
+                <label asp-for="NomeDaAcao" class="control-label"></label>
+                <input asp-for="NomeDaAcao" class="form-control" />
+                <span asp-validation-for="NomeDaAcao" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FechamentoAtual" class="control-label"></label>
+                <input asp-for="FechamentoAtual" class="form-control" />
+                <span asp-validation-for="FechamentoAtual" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Abertura1Antes" class="control-label"></label>
+                <input asp-for="Abertura1Antes" class="form-control" />
+                <span asp-validation-for="Abertura1Antes" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DesvPadrao" class="control-label"></label>
+                <input asp-for="DesvPadrao" class="form-control" />
+                <span asp-validation-for="DesvPadrao" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DataCriado" class="control-label"></label>
+                <input asp-for="DataCriado" class="form-control" />
+                <span asp-validation-for="DataCriado" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Desvio1" class="control-label"></label>
+                <input asp-for="Desvio1" class="form-control" />
+                <span asp-validation-for="Desvio1" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Desvio2" class="control-label"></label>
+                <input asp-for="Desvio2" class="form-control" />
+                <span asp-validation-for="Desvio2" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Desvio1n" class="control-label"></label>
+                <input asp-for="Desvio1n" class="form-control" />
+                <span asp-validation-for="Desvio1n" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Desvio2n" class="control-label"></label>
+                <input asp-for="Desvio2n" class="form-control" />
+                <span asp-validation-for="Desvio2n" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

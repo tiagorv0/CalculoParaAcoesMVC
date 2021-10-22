@@ -1,13 +1,16 @@
 ﻿@model IEnumerable<CalculoParaAcoes.Models.Zscore>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Lista";
 }
 
-<h2>Index</h2>
+<h2>Lista</h2>
 
 <p>
-    <a asp-action="Create">Create New</a>
+    <a asp-action="Create" class="btn btn-default">Novo Cálculo</a>
+</p>
+<p>
+    <a asp-action="Create" class="btn btn-default">Novo Cálculo</a>
 </p>
 <table class="table">
     <thead>
@@ -40,10 +43,10 @@
         <tr>
 
             <td>
-                @Html.DisplayFor(modelItem => item.NomeDaAcao)
+                @Html.DisplayFor(modelItem => item.DataCriado)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Variacao5Anos)
+                @Html.DisplayFor(modelItem => item.NomeDaAcao)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.ValorZscore)
@@ -59,9 +62,9 @@
             </td>
 
             <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                <a asp-action="Edit" asp-route-id="@item.Id">Editar</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Detalhes</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Excluir</a>
             </td>
         </tr>
 }

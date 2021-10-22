@@ -1,4 +1,5 @@
 ﻿using CalculoParaAcoes.Data;
+using CalculoParaAcoesMVC.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -39,6 +40,8 @@ namespace CalculoParaAcoes
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 
             services.AddDbContext<CalculosDbContext>(options => options.UseMySql(Configuration.GetConnectionString("CalculosDbContext"), builder => builder.MigrationsAssembly("CalculoParaAcoesMVC")));
+            services.AddScoped<ZscoreService>();
+            services.AddScoped<DesvioPadraoService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

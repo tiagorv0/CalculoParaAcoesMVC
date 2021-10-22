@@ -1,6 +1,11 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.EntityFrameworkCore;
+using CalculoParaAcoes.Data;
 using CalculoParaAcoes.Models;
 using CalculoParaAcoesMVC.Services;
 using CalculoParaAcoes.Models.ViewModel;
@@ -9,63 +14,62 @@ using CalculoParaAcoesMVC.Services.Exceptions;
 
 namespace CalculoParaAcoesMVC.Controllers
 {
-
-    public class ZscoresController : Controller
+    public class DesvioPadraosController : Controller
     {
+        private readonly DesvioPadraoService _desvioPadraoService;
 
-        private readonly ZscoreService _zscoreService;
-
-        public ZscoresController(ZscoreService zscoreService)
+        public DesvioPadraosController(DesvioPadraoService desvioPadraoService)
         {
-            _zscoreService = zscoreService;
+            _desvioPadraoService = desvioPadraoService;
         }
 
-        // GET: Zscores
+        // GET: DesvioPadraos
         public async Task<IActionResult> Index()
         {
-            return View(await _zscoreService.FindAllAsync());
+            return View(await _desvioPadraoService.FindAllAsync());
         }
 
-        // GET: Zscores/Details/5
+        // GET: DesvioPadraos/Details/5
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null)
             {
-                return RedirectToAction(nameof(Error), new { message = "Id nulo" });
+                return NotFound();
             }
 
-            var zscore = await _zscoreService.FindByIdAsync(id.Value);
-            if (zscore == null)
+            var desvioPadrao = await _desvioPadraoService.FindByIdAsync(id.Value);
+
+            if (desvioPadrao == null)
             {
-                return RedirectToAction(nameof(Error), new { message = "Id não encontrado" });
+                return NotFound();
             }
 
-            return View(zscore);
+            return View(desvioPadrao);
         }
 
-        // GET: Zscores/Create
+        // GET: DesvioPadraos/Create
         public IActionResult Create()
         {
             return View();
         }
 
-        // POST: Zscores/Create
+        // POST: DesvioPadraos/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create(Zscore zscore)
+        public async Task<IActionResult> Create(DesvioPadrao desvioPadrao)
         {
-            if (!ModelState.IsValid)
+            if (ModelState.IsValid)
             {
-                return View(zscore);
-            }
-            await _zscoreService.InsertAsync(zscore);
-            return RedirectToAction(nameof(Index));
 
+                await _desvioPadraoService.InsertAsync(desvioPadrao);
+                return RedirectToAction(nameof(Index));
+            }
+            return View(desvioPadrao);
         }
 
-        // GET: Zscores/Edit/5
+        // GET: DesvioPadraos/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -73,44 +77,46 @@ namespace CalculoParaAcoesMVC.Controllers
                 return RedirectToAction(nameof(Error), new { message = "Id nulo" });
             }
 
-            var zscore = await _zscoreService.FindByIdAsync(id.Value);
-            if (zscore == null)
+            var desvioPadrao = await _desvioPadraoService.FindByIdAsync(id.Value);
+            if (desvioPadrao == null)
             {
                 return RedirectToAction(nameof(Error), new { message = "Id não encontrado" });
             }
-            return View(zscore);
+            return View(desvioPadrao);
         }
 
-        // POST: Zscores/Edit/5
+        // POST: DesvioPadraos/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,NomeDaAcao,Variacao5Anos,Dias,DiasUteis,PrecoAberturaMes,Ewma,PrecoAtual")] Zscore zscore)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,NomeDaAcao,FechamentoAtual,Abertura1Antes,DesvPadrao,DataCriado,Desvio1,Desvio2,Desvio1n,Desvio2n")] DesvioPadrao desvioPadrao)
         {
-            if (!ModelState.IsValid)
+            if (id != desvioPadrao.Id)
             {
-
-                return View(zscore);
+                return NotFound();
             }
 
-            if (id != zscore.Id)
+            if (ModelState.IsValid)
             {
-                return RedirectToAction(nameof(Error), new { message = "Id incompatível" });
-            }
+                return View(desvioPadrao);
 
+            }
             try
             {
-                await _zscoreService.UpdateAsync(zscore);
+                await _desvioPadraoService.UpdateAsync(desvioPadrao);
                 return RedirectToAction(nameof(Index));
             }
             catch (ApplicationException e)
             {
                 return RedirectToAction(nameof(Error), new { message = e.Message });
             }
+            
+
+
         }
 
-        // GET: Zscores/Delete/5
+        // GET: DesvioPadraos/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
@@ -118,23 +124,24 @@ namespace CalculoParaAcoesMVC.Controllers
                 return RedirectToAction(nameof(Error), new { message = "Id nulo" });
             }
 
-            var zscore = await _zscoreService.FindByIdAsync(id.Value);
-            if (zscore == null)
+            var desvioPadrao = await _desvioPadraoService.FindByIdAsync(id.Value);
+                
+            if (desvioPadrao == null)
             {
                 return RedirectToAction(nameof(Error), new { message = "Id não encontrado" });
             }
 
-            return View(zscore);
+            return View(desvioPadrao);
         }
 
-        // POST: Zscores/Delete/5
+        // POST: DesvioPadraos/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
             try
             {
-                await _zscoreService.RemoveAsync(id);
+                var desvioPadrao = await _desvioPadraoService.FindByIdAsync(id);
                 return RedirectToAction(nameof(Index));
             }
             catch (IntegrityException e)

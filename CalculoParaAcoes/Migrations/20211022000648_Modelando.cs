@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace CalculoParaAcoesMVC.Migrations
 {
-    public partial class Criando : Migration
+    public partial class Modelando : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -14,10 +14,15 @@ namespace CalculoParaAcoesMVC.Migrations
                 {
                     Id = table.Column<int>(nullable: false)
                         .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
+                    NomeDaAcao = table.Column<string>(nullable: false),
+                    FechamentoAtual = table.Column<string>(nullable: false),
+                    Abertura1Antes = table.Column<string>(nullable: false),
+                    DesvPadrao = table.Column<string>(nullable: false),
                     DataCriado = table.Column<DateTime>(nullable: false),
-                    FechamentoAtual = table.Column<double>(nullable: false),
-                    Abertura1Antes = table.Column<double>(nullable: false),
-                    DesvPadrao = table.Column<double>(nullable: false)
+                    Desvio1 = table.Column<double>(nullable: false),
+                    Desvio2 = table.Column<double>(nullable: false),
+                    Desvio1n = table.Column<double>(nullable: false),
+                    Desvio2n = table.Column<double>(nullable: false)
                 },
                 constraints: table =>
                 {
@@ -31,12 +36,12 @@ namespace CalculoParaAcoesMVC.Migrations
                     Id = table.Column<int>(nullable: false)
                         .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
                     NomeDaAcao = table.Column<string>(nullable: false),
-                    Variacao5Anos = table.Column<double>(nullable: false),
+                    Variacao5Anos = table.Column<string>(nullable: false),
                     Dias = table.Column<int>(nullable: false),
                     DiasUteis = table.Column<int>(nullable: false),
-                    PrecoAberturaMes = table.Column<double>(nullable: false),
-                    Ewma = table.Column<double>(nullable: false),
-                    PrecoAtual = table.Column<double>(nullable: false),
+                    PrecoAberturaMes = table.Column<string>(nullable: false),
+                    Ewma = table.Column<string>(nullable: false),
+                    PrecoAtual = table.Column<string>(nullable: false),
                     ValorZscore = table.Column<double>(nullable: false),
                     AcimaValorAtual = table.Column<double>(nullable: false),
                     AbaixoValorAtual = table.Column<double>(nullable: false),

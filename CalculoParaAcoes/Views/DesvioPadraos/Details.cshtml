@@ -1,0 +1,72 @@
+﻿@model CalculoParaAcoes.Models.DesvioPadrao
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>DesvioPadrao</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NomeDaAcao)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.NomeDaAcao)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.FechamentoAtual)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.FechamentoAtual)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Abertura1Antes)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Abertura1Antes)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.DesvPadrao)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DesvPadrao)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.DataCriado)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DataCriado)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Desvio1)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Desvio1)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Desvio2)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Desvio2)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Desvio1n)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Desvio1n)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Desvio2n)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Desvio2n)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

@@ -16,11 +16,6 @@ C:\Users\Tiago Vazzoller\Documents\GitHub\CalculoParaAcoes\CalculoParaAcoes\obj\
 C:\Users\Tiago Vazzoller\Documents\GitHub\CalculoParaAcoes\CalculoParaAcoes\obj\Debug\netcoreapp2.1\CalculoParaAcoesMVC.TagHelpers.input.cache
 C:\Users\Tiago Vazzoller\Documents\GitHub\CalculoParaAcoes\CalculoParaAcoes\obj\Debug\netcoreapp2.1\CalculoParaAcoesMVC.TagHelpers.output.cache
 C:\Users\Tiago Vazzoller\Documents\GitHub\CalculoParaAcoes\CalculoParaAcoes\obj\Debug\netcoreapp2.1\CalculoParaAcoesMVC.RazorCoreGenerate.cache
-C:\Users\Tiago Vazzoller\Documents\GitHub\CalculoParaAcoes\CalculoParaAcoes\obj\Debug\netcoreapp2.1\Razor\Views\DesvioPadrao\Create.cshtml.g.cs
-C:\Users\Tiago Vazzoller\Documents\GitHub\CalculoParaAcoes\CalculoParaAcoes\obj\Debug\netcoreapp2.1\Razor\Views\DesvioPadrao\Delete.cshtml.g.cs
-C:\Users\Tiago Vazzoller\Documents\GitHub\CalculoParaAcoes\CalculoParaAcoes\obj\Debug\netcoreapp2.1\Razor\Views\DesvioPadrao\Details.cshtml.g.cs
-C:\Users\Tiago Vazzoller\Documents\GitHub\CalculoParaAcoes\CalculoParaAcoes\obj\Debug\netcoreapp2.1\Razor\Views\DesvioPadrao\Edit.cshtml.g.cs
-C:\Users\Tiago Vazzoller\Documents\GitHub\CalculoParaAcoes\CalculoParaAcoes\obj\Debug\netcoreapp2.1\Razor\Views\DesvioPadrao\Index.cshtml.g.cs
 C:\Users\Tiago Vazzoller\Documents\GitHub\CalculoParaAcoes\CalculoParaAcoes\obj\Debug\netcoreapp2.1\Razor\Views\Home\Contact.cshtml.g.cs
 C:\Users\Tiago Vazzoller\Documents\GitHub\CalculoParaAcoes\CalculoParaAcoes\obj\Debug\netcoreapp2.1\Razor\Views\Home\Index.cshtml.g.cs
 C:\Users\Tiago Vazzoller\Documents\GitHub\CalculoParaAcoes\CalculoParaAcoes\obj\Debug\netcoreapp2.1\Razor\Views\Shared\Error.cshtml.g.cs
@@ -41,3 +36,9 @@ C:\Users\Tiago Vazzoller\Documents\GitHub\CalculoParaAcoes\CalculoParaAcoes\obj\
 C:\Users\Tiago Vazzoller\Documents\GitHub\CalculoParaAcoes\CalculoParaAcoes\obj\Debug\netcoreapp2.1\Razor\Views\Zscores\Edit.cshtml.g.cs
 C:\Users\Tiago Vazzoller\Documents\GitHub\CalculoParaAcoes\CalculoParaAcoes\obj\Debug\netcoreapp2.1\Razor\Views\Zscores\Index.cshtml.g.cs
 C:\Users\Tiago Vazzoller\Documents\GitHub\CalculoParaAcoes\CalculoParaAcoes\obj\Debug\netcoreapp2.1\Razor\Views\Zscores\Create.cshtml.g.cs
+C:\Users\Tiago Vazzoller\Documents\GitHub\CalculoParaAcoes\CalculoParaAcoes\obj\Debug\netcoreapp2.1\CalculoParaAcoesMVC.csproj.AssemblyReference.cache
+C:\Users\Tiago Vazzoller\Documents\GitHub\CalculoParaAcoes\CalculoParaAcoes\obj\Debug\netcoreapp2.1\Razor\Views\DesvioPadraos\Create.cshtml.g.cs
+C:\Users\Tiago Vazzoller\Documents\GitHub\CalculoParaAcoes\CalculoParaAcoes\obj\Debug\netcoreapp2.1\Razor\Views\DesvioPadraos\Delete.cshtml.g.cs
+C:\Users\Tiago Vazzoller\Documents\GitHub\CalculoParaAcoes\CalculoParaAcoes\obj\Debug\netcoreapp2.1\Razor\Views\DesvioPadraos\Details.cshtml.g.cs
+C:\Users\Tiago Vazzoller\Documents\GitHub\CalculoParaAcoes\CalculoParaAcoes\obj\Debug\netcoreapp2.1\Razor\Views\DesvioPadraos\Edit.cshtml.g.cs
+C:\Users\Tiago Vazzoller\Documents\GitHub\CalculoParaAcoes\CalculoParaAcoes\obj\Debug\netcoreapp2.1\Razor\Views\DesvioPadraos\Index.cshtml.g.cs

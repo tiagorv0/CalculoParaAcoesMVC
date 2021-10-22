@@ -12,6 +12,19 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Remove="Migrations\20211019233914_Criando.cs" />
+    <Compile Remove="Migrations\20211019233914_Criando.Designer.cs" />
+    <Compile Remove="Migrations\20211021183947_Atualizando Campos Model.cs" />
+    <Compile Remove="Migrations\20211021183947_Atualizando Campos Model.Designer.cs" />
+    <Compile Remove="Migrations\20211021235814_Ajuste DesvioPadrao.cs" />
+    <Compile Remove="Migrations\20211021235814_Ajuste DesvioPadrao.Designer.cs" />
+    <Compile Remove="Migrations\20211022000029_Ajuste DesvioPadrao.cs" />
+    <Compile Remove="Migrations\20211022000029_Ajuste DesvioPadrao.Designer.cs" />
+    <Compile Remove="Migrations\20211022000338_Criando.cs" />
+    <Compile Remove="Migrations\20211022000338_Criando.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore" Version="2.1.7" />
     <PackageReference Include="Microsoft.AspNetCore.App" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="2.1.3" />
@@ -27,6 +40,10 @@
     <PackageReference Include="Microsoft.VisualStudio.Web.BrowserLink" Version="2.1.1" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.1.10" />
     <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="2.1.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Migrations\" />
   </ItemGroup>
 
 </Project>
