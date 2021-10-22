@@ -27,7 +27,7 @@ namespace CalculoParaAcoesMVC.Services
             var zscore = new Zscore
             {
                 Id = obj.Id,
-                NomeDaAcao = obj.NomeDaAcao,
+                NomeDaAcao = obj.NomeDaAcao.ToUpper(),
                 PrecoAberturaMes = obj.PrecoAberturaMes,
                 PrecoAtual = obj.PrecoAtual,
                 Dias = obj.Dias,

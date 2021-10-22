@@ -28,14 +28,14 @@ namespace CalculoParaAcoesMVC.Services
             var zscore = new DesvioPadrao
             {
                 Id = obj.Id,
-                NomeDaAcao = obj.NomeDaAcao,
+                NomeDaAcao = obj.NomeDaAcao.ToUpper(),
                 FechamentoAtual = obj.FechamentoAtual,
                 Abertura1Antes = obj.Abertura1Antes,
                 DesvPadrao = obj.DesvPadrao
             };
 
             zscore.DataCriado = DateTime.Today;
-            CalculoDesvioPadrao(obj);
+            CalculoDesvioPadrao(zscore);
 
             _context.Add(zscore);
             await _context.SaveChangesAsync();
@@ -76,6 +76,11 @@ namespace CalculoParaAcoesMVC.Services
             {
                 throw new DbConcurrencyException(e.Message);
             }
+
+        }
+
+        public async Task Filter()
+        {
 
         }
 

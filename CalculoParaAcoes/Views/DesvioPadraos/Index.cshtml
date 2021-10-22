@@ -28,16 +28,16 @@
                 @Html.DisplayNameFor(model => model.DesvPadrao)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Desvio1)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Desvio2)
+                @Html.DisplayNameFor(model => model.Desvio2n)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Desvio1n)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Desvio2n)
+                @Html.DisplayNameFor(model => model.Desvio1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Desvio2)
             </th>
             <th></th>
         </tr>
@@ -45,40 +45,41 @@
     <tbody>
         @foreach (var item in Model)
         {
-            <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.DataCriado)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.NomeDaAcao)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.FechamentoAtual)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Abertura1Antes)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.DesvPadrao)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Desvio1)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Desvio2)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Desvio1n)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Desvio2n)
-                </td>
-                <td>
-                    <a asp-action="Edit" asp-route-id="@item.Id">Editar</a> |
-                    <a asp-action="Details" asp-route-id="@item.Id">Detalhes</a> |
-                    <a asp-action="Delete" asp-route-id="@item.Id">Excluir</a>
-                </td>
-            </tr>
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.DataCriado)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NomeDaAcao)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FechamentoAtual)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Abertura1Antes)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DesvPadrao)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Desvio2n)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Desvio1n)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Desvio1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Desvio2)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Editar</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Detalhes</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Excluir</a>
+            </td>
+        </tr>
+            
         }
     </tbody>
 </table>
