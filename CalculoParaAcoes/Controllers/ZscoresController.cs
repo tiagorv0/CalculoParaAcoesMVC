@@ -1,11 +1,11 @@
-﻿using System;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
-using CalculoParaAcoes.Models;
+﻿using CalculoParaAcoes.Models;
+using CalculoParaAcoes.Models.ViewModels;
 using CalculoParaAcoesMVC.Services;
-using CalculoParaAcoes.Models.ViewModel;
-using System.Diagnostics;
 using CalculoParaAcoesMVC.Services.Exceptions;
+using Microsoft.AspNetCore.Mvc;
+using System;
+using System.Diagnostics;
+using System.Threading.Tasks;
 
 namespace CalculoParaAcoesMVC.Controllers
 {
@@ -25,6 +25,11 @@ namespace CalculoParaAcoesMVC.Controllers
         {
             return View(await _zscoreService.FindAllAsync());
         }
+
+        //public async Task<IActionResult> BuscaZscore(string pesquisa)
+        //{
+        //    return View(await _zscoreService.FindAllAsync(pesquisa));
+        //}
 
         // GET: Zscores/Details/5
         public async Task<IActionResult> Details(int? id)

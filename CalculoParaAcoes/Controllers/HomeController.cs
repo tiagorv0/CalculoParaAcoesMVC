@@ -1,5 +1,5 @@
 ﻿using CalculoParaAcoes.Models;
-using CalculoParaAcoes.Models.ViewModel;
+using CalculoParaAcoes.Models.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;

@@ -1,28 +1,85 @@
 ﻿using CalculoParaAcoes.Data;
 using CalculoParaAcoes.Models;
 using CalculoParaAcoes.Services.Exceptions;
+using CalculoParaAcoesMVC.Models.ViewModels;
 using CalculoParaAcoesMVC.Services.Exceptions;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 
 namespace CalculoParaAcoesMVC.Services
 {
     public class ZscoreService
     {
+        private const double N_Meses5Anos = 60.00;
         private readonly CalculosDbContext _context;
 
         public ZscoreService(CalculosDbContext context)
         {
             _context = context;
         }
+
+
         public async Task<List<Zscore>> FindAllAsync()
         {
             return await _context.Zscore.ToListAsync();
         }
 
+        
+
         public async Task InsertAsync(Zscore obj)
+        {
+            Zscore zscore = AtribuirValores(obj);
+
+            _context.Add(zscore);
+            await _context.SaveChangesAsync();
+        }
+        
+
+        public async Task<Zscore> FindByIdAsync(int id)
+        {
+            return await _context.Zscore.FirstOrDefaultAsync(obj => obj.Id == id);
+        }
+
+        public async Task RemoveAsync(int id)
+        {
+            try
+            {
+                var obj = await _context.Zscore.FindAsync(id);
+                _context.Zscore.Remove(obj);
+                await _context.SaveChangesAsync();
+            }
+            catch(DbUpdateException e)
+            {
+                throw new IntegrityException(e.Message);
+            }
+        }
+
+        public async Task UpdateAsync(Zscore obj)
+        {
+            bool hasAny = await _context.Zscore.AnyAsync(x => x.Id == obj.Id);
+            if (!hasAny)
+            {
+                throw new NotFoundException("Id não encontrado");
+            }
+            try
+            {
+                Zscore zscore = AtribuirValores(obj);
+                _context.Update(zscore);
+                await _context.SaveChangesAsync();
+            }
+            catch (DbUpdateConcurrencyException e)
+            {
+                throw new DbConcurrencyException(e.Message);
+            }
+
+        }
+
+        
+
+        private Zscore AtribuirValores(Zscore obj)
         {
             var zscore = new Zscore
             {
@@ -50,58 +107,20 @@ namespace CalculoParaAcoesMVC.Services
                 zscore.AbaixoValorAtual = 1 - zscore.AcimaValorAtual;
             }
 
-            _context.Add(zscore);
-            await _context.SaveChangesAsync();
-        }
-
-        public async Task<Zscore> FindByIdAsync(int id)
-        {
-            return await _context.Zscore.FirstOrDefaultAsync(obj => obj.Id == id);
-        }
-
-        public async Task RemoveAsync(int id)
-        {
-            try
-            {
-                var obj = await _context.Zscore.FindAsync(id);
-                _context.Zscore.Remove(obj);
-                await _context.SaveChangesAsync();
-            }
-            catch(DbUpdateException e)
-            {
-                throw new IntegrityException(e.Message);
-            }
-        }
-
-        public async Task UpdateAsync(Zscore zscore)
-        {
-            bool hasAny = await _context.Zscore.AnyAsync(x => x.Id == zscore.Id);
-            if (!hasAny)
-            {
-                throw new NotFoundException("Id não encontrado");
-            }
-            try
-            {
-                _context.Update(zscore);
-                await _context.SaveChangesAsync();
-            }
-            catch (DbUpdateConcurrencyException e)
-            {
-                throw new DbConcurrencyException(e.Message);
-            }
-
+            return zscore;
         }
 
         private double CalculoZscore(Zscore zscore)
         {
-            double variacaoMediaMensal = Math.Pow((1 + (Convert.ToDouble(zscore.Variacao5Anos) / 100)) , (1 / 60.00)) - 1;
+            double variacaoMediaMensal = Math.Pow((1 + (Convert.ToDouble(zscore.Variacao5Anos) / 100)) , (1 / N_Meses5Anos)) - 1;
             double variacaoMediaPeriodo = Math.Pow(1 + variacaoMediaMensal, zscore.Dias / Convert.ToDouble(zscore.DiasUteis));
             //double retornoMedio = PrecoAberturaMes * variacaoMediaPeriodo;
 
             double desvioPadraoDiario = Convert.ToDouble(zscore.Ewma) / Math.Sqrt(252);
             double desvioPadraoPeriodo = desvioPadraoDiario * Math.Sqrt(zscore.Dias);
 
-            return ((((Convert.ToDouble(zscore.PrecoAtual) / Convert.ToDouble(zscore.PrecoAberturaMes)) - 1) - (variacaoMediaPeriodo - 1)) / desvioPadraoPeriodo) * 100;
+            return ((((Convert.ToDouble(zscore.PrecoAtual) / Convert.ToDouble(zscore.PrecoAberturaMes)) - 1) 
+                - (variacaoMediaPeriodo - 1)) / desvioPadraoPeriodo) * 100;
         }
 
         private double TabelaZscore(double valorZscore)

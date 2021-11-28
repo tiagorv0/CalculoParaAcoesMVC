@@ -51,7 +51,5 @@ namespace CalculoParaAcoes.Models
         }
 
         
-
-        
     }
 }

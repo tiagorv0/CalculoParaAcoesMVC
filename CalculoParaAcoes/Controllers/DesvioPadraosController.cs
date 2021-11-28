@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore;
 using CalculoParaAcoes.Data;
 using CalculoParaAcoes.Models;
 using CalculoParaAcoesMVC.Services;
-using CalculoParaAcoes.Models.ViewModel;
+using CalculoParaAcoes.Models.ViewModels;
 using System.Diagnostics;
 using CalculoParaAcoesMVC.Services.Exceptions;
 
@@ -28,6 +28,8 @@ namespace CalculoParaAcoesMVC.Controllers
         {
             return View(await _desvioPadraoService.FindAllAsync());
         }
+
+       
 
         // GET: DesvioPadraos/Details/5
         public async Task<IActionResult> Details(int? id)
@@ -141,7 +143,7 @@ namespace CalculoParaAcoesMVC.Controllers
         {
             try
             {
-                var desvioPadrao = await _desvioPadraoService.FindByIdAsync(id);
+                await _desvioPadraoService.RemoveAsync(id);
                 return RedirectToAction(nameof(Index));
             }
             catch (IntegrityException e)

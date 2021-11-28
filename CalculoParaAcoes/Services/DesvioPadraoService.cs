@@ -11,6 +11,7 @@ namespace CalculoParaAcoesMVC.Services
 {
     public class DesvioPadraoService
     {
+        private const double N_Meses = 12.0;
         private readonly CalculosDbContext _context;
 
         public DesvioPadraoService(CalculosDbContext context)
@@ -23,23 +24,20 @@ namespace CalculoParaAcoesMVC.Services
             return await _context.DesvioPadrao.ToListAsync();
         }
 
+        public async Task<List<string>> FindByNameAsync()
+        {
+            return await _context.DesvioPadrao.Select(n => n.NomeDaAcao).ToListAsync();
+        }
+
         public async Task InsertAsync(DesvioPadrao obj)
         {
-            var zscore = new DesvioPadrao
-            {
-                Id = obj.Id,
-                NomeDaAcao = obj.NomeDaAcao.ToUpper(),
-                FechamentoAtual = obj.FechamentoAtual,
-                Abertura1Antes = obj.Abertura1Antes,
-                DesvPadrao = obj.DesvPadrao
-            };
+            DesvioPadrao desvioPadrao = AtribuirValores(obj);
 
-            zscore.DataCriado = DateTime.Today;
-            CalculoDesvioPadrao(zscore);
-
-            _context.Add(zscore);
+            _context.Add(desvioPadrao);
             await _context.SaveChangesAsync();
         }
+
+        
 
         public async Task<DesvioPadrao> FindByIdAsync(int id)
         {
@@ -60,15 +58,16 @@ namespace CalculoParaAcoesMVC.Services
             }
         }
 
-        public async Task UpdateAsync(DesvioPadrao desvioPadrao)
+        public async Task UpdateAsync(DesvioPadrao obj)
         {
-            bool hasAny = await _context.DesvioPadrao.AnyAsync(x => x.Id == desvioPadrao.Id);
+            bool hasAny = await _context.DesvioPadrao.AnyAsync(x => x.Id == obj.Id);
             if (!hasAny)
             {
                 throw new NotFoundException("Id não encontrado");
             }
             try
             {
+                DesvioPadrao desvioPadrao = AtribuirValores(obj);
                 _context.Update(desvioPadrao);
                 await _context.SaveChangesAsync();
             }
@@ -79,9 +78,20 @@ namespace CalculoParaAcoesMVC.Services
 
         }
 
-        public async Task Filter()
+        private DesvioPadrao AtribuirValores(DesvioPadrao obj)
         {
+            var zscore = new DesvioPadrao
+            {
+                Id = obj.Id,
+                NomeDaAcao = obj.NomeDaAcao.ToUpper(),
+                FechamentoAtual = obj.FechamentoAtual,
+                Abertura1Antes = obj.Abertura1Antes,
+                DesvPadrao = obj.DesvPadrao
+            };
 
+            zscore.DataCriado = DateTime.Today;
+            CalculoDesvioPadrao(zscore);
+            return zscore;
         }
 
         public void CalculoDesvioPadrao(DesvioPadrao desvioPadrao)
@@ -89,7 +99,7 @@ namespace CalculoParaAcoesMVC.Services
             double convertedFechamento = Convert.ToDouble(desvioPadrao.FechamentoAtual);
 
             double retornoAbsoluto = convertedFechamento / Convert.ToDouble(desvioPadrao.Abertura1Antes) - 1;
-            double retornoMediaMensal = Math.Pow(1 + retornoAbsoluto, 1 / 12.0) - 1;
+            double retornoMediaMensal = Math.Pow(1 + retornoAbsoluto, 1 / N_Meses) - 1;
 
             double dv = Convert.ToDouble(desvioPadrao.DesvPadrao) / Math.Sqrt(12) / 100;
 

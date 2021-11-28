@@ -1,6 +1,6 @@
 using System;
 
-namespace CalculoParaAcoes.Models.ViewModel
+namespace CalculoParaAcoes.Models.ViewModels
 {
     public class ErrorViewModel
     {
