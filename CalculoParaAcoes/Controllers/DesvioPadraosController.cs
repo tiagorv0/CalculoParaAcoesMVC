@@ -55,9 +55,7 @@ namespace CalculoParaAcoesMVC.Controllers
             return View();
         }
 
-        // POST: DesvioPadraos/Create
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
-        // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
+        
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create(DesvioPadrao desvioPadrao)
@@ -87,9 +85,7 @@ namespace CalculoParaAcoesMVC.Controllers
             return View(desvioPadrao);
         }
 
-        // POST: DesvioPadraos/Edit/5
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
-        // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
+        
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("Id,NomeDaAcao,FechamentoAtual,Abertura1Antes,DesvPadrao,DataCriado,Desvio1,Desvio2,Desvio1n,Desvio2n")] DesvioPadrao desvioPadrao)

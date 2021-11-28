@@ -148,8 +148,6 @@ namespace CalculoParaAcoesMVC.Controllers
             }
         }
 
-
-
         private IActionResult Error(string message)
         {
             var viewModel = new ErrorViewModel
@@ -159,5 +157,7 @@ namespace CalculoParaAcoesMVC.Controllers
             };
             return View(viewModel);
         }
+
+
     }
 }
