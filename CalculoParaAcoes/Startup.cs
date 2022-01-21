@@ -1,8 +1,10 @@
 ﻿using CalculoParaAcoes.Data;
+using CalculoParaAcoesMVC.Data;
 using CalculoParaAcoesMVC.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Localization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -36,6 +38,10 @@ namespace CalculoParaAcoes
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 
             services.AddDbContext<CalculosDbContext>(options => options.UseMySql(Configuration.GetConnectionString("CalculosDbContext"), builder => builder.MigrationsAssembly("CalculoParaAcoesMVC")));
+            services.AddDbContext<UsuariosDbContext>(options => options.UseMySql(Configuration.GetConnectionString("UsuariosDbContext")));
+
+            services.AddIdentity<IdentityUser, IdentityRole>().AddEntityFrameworkStores<UsuariosDbContext>();
+
             services.AddScoped<ZscoreService>();
             services.AddScoped<DesvioPadraoService>();
         }
@@ -51,6 +57,8 @@ namespace CalculoParaAcoes
                 SupportedUICultures = new List<CultureInfo> { ptBR }
             };
 
+            
+
             app.UseRequestLocalization(localizationOptions);
             if (env.IsDevelopment())
             {
@@ -65,6 +73,8 @@ namespace CalculoParaAcoes
             app.UseHttpsRedirection();
             app.UseStaticFiles();
             app.UseCookiePolicy();
+
+            app.UseAuthentication();
 
             app.UseMvc(routes =>
             {

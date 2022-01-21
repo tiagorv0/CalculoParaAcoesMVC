@@ -1,5 +1,4 @@
 ﻿using System.ComponentModel.DataAnnotations;
-using CalculoParaAcoes.Services.Exceptions;
 using System;
 
 namespace CalculoParaAcoes.Models

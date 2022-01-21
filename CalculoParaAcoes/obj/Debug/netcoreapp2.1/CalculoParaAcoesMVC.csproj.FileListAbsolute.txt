@@ -42,3 +42,8 @@ C:\Users\Tiago Vazzoller\Documents\GitHub\CalculoParaAcoes\CalculoParaAcoes\obj\
 C:\Users\Tiago Vazzoller\Documents\GitHub\CalculoParaAcoes\CalculoParaAcoes\obj\Debug\netcoreapp2.1\Razor\Views\DesvioPadraos\Details.cshtml.g.cs
 C:\Users\Tiago Vazzoller\Documents\GitHub\CalculoParaAcoes\CalculoParaAcoes\obj\Debug\netcoreapp2.1\Razor\Views\DesvioPadraos\Edit.cshtml.g.cs
 C:\Users\Tiago Vazzoller\Documents\GitHub\CalculoParaAcoes\CalculoParaAcoes\obj\Debug\netcoreapp2.1\Razor\Views\DesvioPadraos\Index.cshtml.g.cs
+C:\Users\Tiago Vazzoller\Documents\GitHub\CalculoParaAcoes\CalculoParaAcoes\obj\Debug\netcoreapp2.1\Razor\Views\Conta\Login.cshtml.g.cs
+C:\Users\Tiago Vazzoller\Documents\GitHub\CalculoParaAcoes\CalculoParaAcoes\obj\Debug\netcoreapp2.1\Razor\Views\Conta\Registrar.cshtml.g.cs
+C:\Users\Tiago Vazzoller\Documents\GitHub\CalculoParaAcoes\CalculoParaAcoes\obj\Debug\netcoreapp2.1\Razor\Views\Conta\EsqueciSenha.cshtml.g.cs
+C:\Users\Tiago Vazzoller\Documents\GitHub\CalculoParaAcoes\CalculoParaAcoes\obj\Debug\netcoreapp2.1\Razor\Views\Conta\CadastroRealizado.cshtml.g.cs
+C:\Users\Tiago Vazzoller\Documents\GitHub\CalculoParaAcoes\CalculoParaAcoes\obj\Debug\netcoreapp2.1\Razor\Views\Conta\ConfirmacaoAlteracaoSenha.cshtml.g.cs

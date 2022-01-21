@@ -9,9 +9,9 @@ using System.Threading.Tasks;
 
 namespace CalculoParaAcoesMVC.Services
 {
-    public class DesvioPadraoService
+    public class DesvioPadraoService : IService<DesvioPadrao>
     {
-        private const double N_Meses = 12.0;
+        
         private readonly CalculosDbContext _context;
 
         public DesvioPadraoService(CalculosDbContext context)
@@ -36,8 +36,6 @@ namespace CalculoParaAcoesMVC.Services
             _context.Add(desvioPadrao);
             await _context.SaveChangesAsync();
         }
-
-        
 
         public async Task<DesvioPadrao> FindByIdAsync(int id)
         {
@@ -78,7 +76,7 @@ namespace CalculoParaAcoesMVC.Services
 
         }
 
-        private DesvioPadrao AtribuirValores(DesvioPadrao obj)
+        public DesvioPadrao AtribuirValores(DesvioPadrao obj)
         {
             var zscore = new DesvioPadrao
             {
@@ -96,6 +94,8 @@ namespace CalculoParaAcoesMVC.Services
 
         public void CalculoDesvioPadrao(DesvioPadrao desvioPadrao)
         {
+            double N_Meses = 12.0;
+
             double convertedFechamento = Convert.ToDouble(desvioPadrao.FechamentoAtual);
 
             double retornoAbsoluto = convertedFechamento / Convert.ToDouble(desvioPadrao.Abertura1Antes) - 1;

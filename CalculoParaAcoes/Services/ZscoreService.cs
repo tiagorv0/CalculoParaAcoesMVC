@@ -1,19 +1,17 @@
 ﻿using CalculoParaAcoes.Data;
 using CalculoParaAcoes.Models;
 using CalculoParaAcoes.Services.Exceptions;
-using CalculoParaAcoesMVC.Models.ViewModels;
 using CalculoParaAcoesMVC.Services.Exceptions;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 
 namespace CalculoParaAcoesMVC.Services
 {
-    public class ZscoreService
+    public class ZscoreService : IService<Zscore>
     {
-        private const double N_Meses5Anos = 60.00;
+        
         private readonly CalculosDbContext _context;
 
         public ZscoreService(CalculosDbContext context)
@@ -21,13 +19,10 @@ namespace CalculoParaAcoesMVC.Services
             _context = context;
         }
 
-
         public async Task<List<Zscore>> FindAllAsync()
         {
             return await _context.Zscore.ToListAsync();
         }
-
-        
 
         public async Task InsertAsync(Zscore obj)
         {
@@ -37,7 +32,6 @@ namespace CalculoParaAcoesMVC.Services
             await _context.SaveChangesAsync();
         }
         
-
         public async Task<Zscore> FindByIdAsync(int id)
         {
             return await _context.Zscore.FirstOrDefaultAsync(obj => obj.Id == id);
@@ -78,8 +72,7 @@ namespace CalculoParaAcoesMVC.Services
         }
 
         
-
-        private Zscore AtribuirValores(Zscore obj)
+        public Zscore AtribuirValores(Zscore obj)
         {
             var zscore = new Zscore
             {
@@ -92,7 +85,6 @@ namespace CalculoParaAcoesMVC.Services
                 Ewma = obj.Ewma,
                 Variacao5Anos = obj.Variacao5Anos,
             };
-
             zscore.DataCriado = DateTime.Today;
             zscore.ValorZscore = CalculoZscore(zscore);
 
@@ -112,9 +104,10 @@ namespace CalculoParaAcoesMVC.Services
 
         private double CalculoZscore(Zscore zscore)
         {
+            double N_Meses5Anos = 60.00;
+
             double variacaoMediaMensal = Math.Pow((1 + (Convert.ToDouble(zscore.Variacao5Anos) / 100)) , (1 / N_Meses5Anos)) - 1;
             double variacaoMediaPeriodo = Math.Pow(1 + variacaoMediaMensal, zscore.Dias / Convert.ToDouble(zscore.DiasUteis));
-            //double retornoMedio = PrecoAberturaMes * variacaoMediaPeriodo;
 
             double desvioPadraoDiario = Convert.ToDouble(zscore.Ewma) / Math.Sqrt(252);
             double desvioPadraoPeriodo = desvioPadraoDiario * Math.Sqrt(zscore.Dias);
@@ -145,7 +138,7 @@ namespace CalculoParaAcoesMVC.Services
             }
 
 
-            double[][,] dados = new double[3][,]
+            double[][,] valoresTabelaZscore = new double[3][,]
             {
                 new double [,] {
                 {0.5000,0.5040,0.5080,0.5120,0.5160,0.5199,0.5239,0.5279,0.5319,0.5359},
@@ -200,7 +193,7 @@ namespace CalculoParaAcoesMVC.Services
                             if (l == n2 && c == n3)
                             {
                                 
-                                return dados[i][l, c];
+                                return valoresTabelaZscore[i][l, c];
                             }
                         }
                     }

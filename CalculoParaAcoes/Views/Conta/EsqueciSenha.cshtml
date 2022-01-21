@@ -1,0 +1,22 @@
+﻿@model CalculoParaAcoesMVC.Models.ViewModels.ContaEsqueciSenhaViewModel
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+<h2>Esqueci a senha </h2>
+
+@using (Html.BeginForm()) 
+{ 
+    <h4>Informe o e-mail do seu cadastro para recuperar a senha</h4>
+    <hr />
+
+    @Html.ValidationSummary("", new { @class = "text-danger" })
+
+    @Html.EditorForModel()
+
+    <br />
+
+    <input type="submit" value="Enviar" />
+}

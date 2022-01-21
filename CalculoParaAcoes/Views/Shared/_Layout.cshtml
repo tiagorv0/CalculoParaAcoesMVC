@@ -1,4 +1,6 @@
-﻿<!DOCTYPE html>
+﻿@using Microsoft.AspNet.Identity
+
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
@@ -56,6 +58,23 @@
                     </div>
                     <button type="submit" class="btn btn-default">Pesquisar</button>
                 </form>
+                <ul class="nav navbar-nav navbar-right">
+                    @if (Context.User.Identity.IsAuthenticated)
+                    {
+                        using (Html.BeginForm("Logoff", "Conta", FormMethod.Post, new { id = "formulario_logoff" }))
+                        {
+
+                        }
+                        <li> <p class="navbar-text"> Olá, @Html.ActionLink(User.Identity.GetUserName(), "MinhaConta", "Conta") </p></li>
+                        <li><a href="javascript:document.getElementById('formulario_logoff').submit()">Logoff</a></li>
+                    }
+                    else
+                    {
+                        <li><a asp-area="" asp-controller="Conta" asp-action="Registrar">Registrar</a></li>
+                        <li><a asp-area="" asp-controller="Conta" asp-action="Login">Login</a></li>
+
+                    }
+                </ul>
             </div>
         </div>
     </nav>
@@ -66,7 +85,7 @@
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; 2021 - CalculoParaAcoes</p>
+            <p>&copy; @DateTime.Now.Year - CalculoParaAcoes</p>
         </footer>
     </div>
 

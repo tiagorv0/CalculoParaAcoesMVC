@@ -1,0 +1,7 @@
+C:\Users\Tiago Vazzoller\Documents\GitHub\CalculoParaAcoes\CalculoParaAcoes.AuthApi\obj\Debug\netcoreapp2.1\CalculoParaAcoes.AuthApi.csproj.AssemblyReference.cache
+C:\Users\Tiago Vazzoller\Documents\GitHub\CalculoParaAcoes\CalculoParaAcoes.AuthApi\obj\Debug\netcoreapp2.1\CalculoParaAcoes.AuthApi.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Tiago Vazzoller\Documents\GitHub\CalculoParaAcoes\CalculoParaAcoes.AuthApi\obj\Debug\netcoreapp2.1\CalculoParaAcoes.AuthApi.AssemblyInfoInputs.cache
+C:\Users\Tiago Vazzoller\Documents\GitHub\CalculoParaAcoes\CalculoParaAcoes.AuthApi\obj\Debug\netcoreapp2.1\CalculoParaAcoes.AuthApi.AssemblyInfo.cs
+C:\Users\Tiago Vazzoller\Documents\GitHub\CalculoParaAcoes\CalculoParaAcoes.AuthApi\obj\Debug\netcoreapp2.1\CalculoParaAcoes.AuthApi.csproj.CoreCompileInputs.cache
+C:\Users\Tiago Vazzoller\Documents\GitHub\CalculoParaAcoes\CalculoParaAcoes.AuthApi\obj\Debug\netcoreapp2.1\CalculoParaAcoes.AuthApi.RazorAssemblyInfo.cache
+C:\Users\Tiago Vazzoller\Documents\GitHub\CalculoParaAcoes\CalculoParaAcoes.AuthApi\obj\Debug\netcoreapp2.1\CalculoParaAcoes.AuthApi.RazorAssemblyInfo.cs

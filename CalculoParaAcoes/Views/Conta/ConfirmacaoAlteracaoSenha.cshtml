@@ -1,0 +1,15 @@
+﻿@model CalculoParaAcoesMVC.Models.ViewModels.ContaConfirmacaoAlteracaoSenhaViewModel
+
+@{
+    ViewData["Title"] = "ConfirmacaoAlteracaoSenha";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Confirmação Alteração Senha</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary("", new { @class = "text-danger" })
+
+    @Html.EditorForModel()
+}
