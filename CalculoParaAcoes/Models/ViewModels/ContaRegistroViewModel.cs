@@ -25,6 +25,7 @@ namespace CalculoParaAcoesMVC.Models.ViewModels
 
         [Required]
         [DataType(DataType.Password)]
+        [Compare("Password", ErrorMessage = "Senhas informadas não conferem")]
         public string ConfirmPassword { get; set; }
     }
 }
